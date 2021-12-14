@@ -1,0 +1,31 @@
+{
+  "name": "smoothie-css",
+  "version": "1.0.0",
+  "description": "Smoothie is a CSS framework for dashboards",
+  "main": "dist/smoothie.css",
+  "scripts": {
+    "watch": "npm run expanded -- --watch",
+    "build": "npm run expanded && npm run autoprefixer && npm run compressed",
+    "autoprefixer": "postcss --use autoprefixer --no-map -o dist/smoothie.css dist/smoothie.css",
+    "compressed": "sass src/smoothie.scss dist/smoothie.min.css --style compressed",
+    "expanded": "sass src/smoothie.scss dist/smoothie.css --style expanded"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edgaryonemura/smoothie-css.git"
+  },
+  "keywords": [
+    "css"
+  ],
+  "author": "edddieee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edgaryonemura/smoothie-css/issues"
+  },
+  "homepage": "https://github.com/edgaryonemura/smoothie-css#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss-cli": "^9.1.0",
+    "sass": "^1.45.0"
+  }
+}
